@@ -49,8 +49,8 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'postcss']
+        files: ['<%= yeoman.app %>/styles/{,*/}*.sass'],
+        tasks: [ 'sass', 'newer:copy:styles', 'postcss']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -138,6 +138,24 @@ module.exports = function (grunt) {
       }
     },
 
+    sass: {
+      server: {
+        options: {
+          sourceMap: true
+        },
+        files: {
+          '.tmp/styles/main.css': '<%= yeoman.app %>/styles/sass/main.sass'
+        }
+      },
+      dev: {
+        options: {
+          sourceMap: true
+        },
+        files: {
+          '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/styles/sass/main.sass'
+        }
+      }
+    },
     // Make sure code styles are up to par
     jscs: {
       options: {
@@ -431,6 +449,7 @@ module.exports = function (grunt) {
       'clean:server',
       'wiredep',
       'concurrent:server',
+      'sass:server',
       'postcss:server',
       'connect:livereload',
       'watch'
@@ -446,6 +465,7 @@ module.exports = function (grunt) {
     'clean:server',
     'wiredep',
     'concurrent:test',
+    'sass:dev',
     'postcss',
     'connect:test',
     'karma'
@@ -456,6 +476,7 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
+    'sass:dev',
     'postcss',
     'ngtemplates',
     'concat',

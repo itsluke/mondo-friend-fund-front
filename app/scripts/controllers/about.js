@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name 03CodeApp.controller:AboutCtrl
+ * @name friendFund.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the 03CodeApp
+ * Controller of the friendFund
  */
-angular.module('03CodeApp')
+angular.module('friendFund')
   .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

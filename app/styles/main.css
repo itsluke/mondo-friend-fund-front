@@ -1,11 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,200);
+h1, h2, h3, .btn, h4 {
+  font-family: Raleway;
+  font-weight: 200; }
+
+h1 {
+  font-size: 49px;
+  letter-spacing: -1.19px; }
+
+p {
+  font-family: Raleway;
+  font-size: 500;
+  letter-spacing: -0.44px; }
+
+.nav {
+  height: 40px;
+  background: #fff;
+  list-style: none; }
+
+.nav__li {
+  display: inline-block;
+  padding: 10px; }
+
+.btn {
+  box-sizing: border-box;
+  height: 50px;
+  padding: 15px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.07), 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+  text-align: center; }
+  .btn:hover {
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.12), 0px 15px 35px 0px rgba(0, 0, 0, 0.16); }
+  .btn--alt {
+    background: #C0D1E3; }
+
+.action-buttons {
+  width: 280px;
+  margin: 68px auto; }
+  .action-buttons .btn {
+    margin-bottom: 11px; }
+    .action-buttons .btn:last-child {
+      margin-bottom: 0px; }
+
+.branding__image {
+  background-image: url(http://placehold.it/350x150);
+  background-color: linear-gradient(-180deg, #5D87CF 0%, #004AAB 79%, #0049AA 100%);
+  background-blend-mode: multiply;
+  height: 100%; }
+  .branding__image--hero {
+    opacity: 0.3;
+    min-height: 300px; }
+
+.home {
+  height: 100%; }
+
+.hero {
+  height: calc( 100% - 247px);
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .hero h1 {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    margin-top: -30px;
+    top: 50%;
+    text-align: center; }
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0; }
 
-body {
+html, body {
+  height: 100%;
   padding: 0;
-  background: #666666; }
+  margin: 0; }
+
+body {
+  background-image: linear-gradient(-180deg, #5D87CF 0%, #004AAB 79%, #0049AA 100%); }
+
+.full {
+  height: 100%;
+  width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

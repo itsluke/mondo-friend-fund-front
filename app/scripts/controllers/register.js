@@ -8,6 +8,10 @@
  * Controller of the friendFund
  */
 angular.module('friendFund')
-  .controller('RegisterCtrl', function () {
+  .controller('RegisterCtrl', ['$scope', function ($scope) {
 
-  });
+    $scope.hello = function(){
+      return 'world';
+    };
+
+  }]);
